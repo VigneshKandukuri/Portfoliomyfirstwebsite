@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vignesh Kandukuri | Elite Cyber-Security Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@300;500;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --neon-green: #00ff88;
+            --neon-blue: #00d4ff;
+            --neon-red: #ff003c;
+            --bg-deep: #050505;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: #e0e0e0;
+            font-family: 'JetBrains Mono', monospace;
+            overflow-x: hidden;
+        }
+
+        /* --- Anonymous Team Background Effects --- */
+        #circuit-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(circle at 2px 2px, rgba(0, 255, 136, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+            z-index: -1;
+        }
+
+        .cyber-grid {
+            position: fixed;
+            bottom: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(0deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            transform: perspective(500px) rotateX(60deg);
+            transform-origin: bottom;
+            z-index: -2;
+            animation: gridMove 10s linear infinite;
+        }
+
+        @keyframes gridMove {
+            from { background-position: 0 0; }
+            to { background-position: 0 50px; }
+        }
+
+        /* --- Logo Breach Animation --- */
+        .hacking-logo {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            width: 120px;
+            height: 120px;
+            z-index: 100;
+            filter: drop-shadow(0 0 10px var(--neon-green));
+            transition: all 0.3s ease;
+        }
+
+        .hacking-logo:hover {
+            animation: glitch-flicker 0.2s infinite;
+            filter: drop-shadow(0 0 20px var(--neon-red));
+        }
+
+        @keyframes glitch-flicker {
+            0% { opacity: 1; transform: translate(0); }
+            20% { opacity: 0.8; transform: translate(-2px, 2px); }
+            40% { opacity: 1; transform: translate(2px, -2px); filter: hue-rotate(90deg); }
+            60% { opacity: 0.9; transform: translate(-1px, 0); }
+            80% { opacity: 1; transform: translate(1px, 1px); filter: invert(0.1); }
+            100% { opacity: 1; transform: translate(0); }
+        }
+
+        /* --- Glitch Header --- */
+        .glitch-heavy {
+            position: relative;
+            animation: main-glitch 4s infinite;
+        }
+
+        @keyframes main-glitch {
+            0%, 90%, 100% { transform: translate(0); }
+            92% { transform: translate(-5px, 2px); color: var(--neon-red); }
+            94% { transform: translate(5px, -2px); color: var(--neon-blue); }
+            96% { transform: translate(-2px, 0); filter: brightness(2); }
+        }
+
+        /* --- Cyber Cards --- */
+        .cyber-card {
+            background: rgba(5, 5, 10, 0.85);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            position: relative;
+            clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+        }
+
+        .cyber-card:hover {
+            border-color: var(--neon-green);
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
+        }
+
+        .status-tag {
+            font-size: 10px;
+            letter-spacing: 2px;
+            background: rgba(0, 255, 136, 0.1);
+            padding: 2px 8px;
+            border-left: 2px solid var(--neon-green);
+        }
+
+        /* --- Custom Scrollbar --- */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: var(--neon-green); }
+    </style>
+</head>
+<body>
+
+    <div id="circuit-overlay"></div>
+    <div class="cyber-grid"></div>
+
+    <div class="hacking-logo group cursor-wait">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Anonymous_emblem.svg" alt="Anonymous" class="w-full h-full opacity-80 group-hover:opacity-100">
+        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] text-neon-green whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity font-bold">
+            [IDENT_VERIFIED: OPERATIVE_VIGNESH]
+        </div>
+    </div>
+
+    <main class="relative z-10">
+        
+        <section class="min-h-screen flex flex-col items-center justify-center p-6">
+            <div class="max-w-5xl w-full text-center">
+                <div class="mb-4 flex justify-center items-center gap-4">
+                    <span class="h-[1px] w-12 bg-neon-green/30"></span>
+                    <p class="font-bold text-neon-green tracking-[0.4em] text-xs uppercase">
+                        We Are Legion. Expect Us.
+                    </p>
+                    <span class="h-[1px] w-12 bg-neon-green/30"></span>
+                </div>
+
+                <h1 class="text-7xl md:text-9xl font-black mb-8 glitch-heavy font-orbitron tracking-tighter" style="font-family: 'Orbitron';">
+                    VIGNESH<br><span class="text-neon-blue">KANDUKURI</span>
+                </h1>
+                
+                <div class="bg-black/80 border border-neon-green/20 p-6 max-w-2xl mx-auto backdrop-blur-xl relative">
+                    <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-neon-green"></div>
+                    <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-neon-green"></div>
+                    <p id="typewriter" class="text-neon-green font-mono text-lg min-h-[1.5em]"></p>
+                </div>
+
+                <div class="mt-12 flex flex-wrap gap-6 justify-center">
+                    <button class="cyber-card px-12 py-4 font-bold text-neon-green hover:bg-neon-green hover:text-black transition-all group">
+                        <span class="relative z-10 flex items-center gap-2">
+                            <span class="w-2 h-2 bg-neon-green rounded-full group-hover:bg-black animate-ping"></span>
+                            ACCESS_DATABASE
+                        </span>
+                    </button>
+                    <button class="border border-neon-blue/40 text-neon-blue px-12 py-4 font-bold hover:bg-neon-blue/10 transition-all">
+                        ENCRYPTED_MESSAGE
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto py-32 px-6">
+            <div class="flex items-center gap-6 mb-20">
+                <h2 class="text-4xl font-orbitron text-white">/OPERATIONAL_CAPACITY</h2>
+                <div class="h-[2px] flex-grow bg-gradient-to-r from-neon-green to-transparent"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="cyber-card p-10 group relative border-l-neon-green/50">
+                    <div class="status-tag mb-6 text-neon-green">VULN_RESEARCH</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-neon-green transition-colors">Digital Infiltration</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Expertise in bypassing advanced firewall architectures and implementing zero-day exploits in secure environments.</p>
+                    <div class="flex items-center gap-2 text-[10px] text-neon-green/60">
+                        <span class="animate-pulse">●</span> EXPLOIT_STABLE_V1.4
+                    </div>
+                </div>
+
+                <div class="cyber-card p-10 group border-l-neon-blue/50">
+                    <div class="status-tag mb-6 text-neon-blue border-neon-blue">NETWORK_INTEL</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-neon-blue transition-colors">Packet Analysis</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Deep-dive traffic decryption and protocol reverse engineering to identify hidden backdoors and data leaks.</p>
+                    <div class="flex items-center gap-2 text-[10px] text-neon-blue/60">
+                        <span class="animate-pulse">●</span> SNIFFER_ACTIVE
+                    </div>
+                </div>
+
+                <div class="cyber-card p-10 group border-l-neon-red/50">
+                    <div class="status-tag mb-6 text-neon-red border-neon-red">OPS_SECURITY</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-neon-red transition-colors">Anti-Forensics</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Implementing untraceable tunneling and memory-only execution protocols to ensure operational anonymity.</p>
+                    <div class="flex items-center gap-2 text-[10px] text-neon-red/60">
+                        <span class="animate-pulse">●</span> TRACE_CLEANED
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Typewriter Effect with "Anonymous" Style messages
+        const text = [
+            "> Initializing secure handshake...",
+            "> Masking IP address: [HIDDEN]",
+            "> Knowledge is free.",
+            "> We are Vignesh Kandukuri.",
+            "> Expect the unexpected."
+        ];
+        let line = 0;
+        let char = 0;
+        const target = document.getElementById('typewriter');
+
+        function type() {
+            if (char < text[line].length) {
+                target.textContent += text[line].charAt(char);
+                char++;
+                setTimeout(type, 40);
+            } else {
+                setTimeout(() => {
+                    target.textContent = '';
+                    char = 0;
+                    line = (line + 1) % text.length;
+                    type();
+                }, 2500);
+            }
+        }
+        type();
+
+        // Matrix Rain (Optimized for performance)
+        const matrixBG = document.createElement('canvas');
+        matrixBG.style.position = 'fixed';
+        matrixBG.style.top = '0';
+        matrixBG.style.left = '0';
+        matrixBG.style.zIndex = '-3';
+        matrixBG.style.opacity = '0.12';
+        document.body.appendChild(matrixBG);
+        const ctx = matrixBG.getContext('2d');
+
+        function resize() {
+            matrixBG.width = window.innerWidth;
+            matrixBG.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        const binary = "10110100101011010";
+        const drops = Array(Math.floor(matrixBG.width/20)).fill(0);
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+            ctx.fillRect(0, 0, matrixBG.width, matrixBG.height);
+            ctx.fillStyle = '#0f8';
+            ctx.font = '14px monospace';
+            drops.forEach((y, i) => {
+                const char = binary[Math.floor(Math.random()*binary.length)];
+                ctx.fillText(char, i*20, y);
+                if(y > matrixBG.height && Math.random() > 0.98) drops[i] = 0;
+                drops[i] += 15;
+            });
+        }
+        setInterval(draw, 50);
+
+        // 3D Card Interaction
+        document.querySelectorAll('.cyber-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width/2;
+                const y = e.clientY - rect.top - rect.height/2;
+                card.style.transform = `perspective(1000px) rotateY(${x/25}deg) rotateX(${-y/25}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateY(0) rotateX(0)`;
+            });
+        });
+    </script>
+</body>
+</html>
